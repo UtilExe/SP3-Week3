@@ -5,8 +5,11 @@ For Monday, the following tasks are implemented:
 https://docs.google.com/document/d/1yN8fiKHI5oz4TfZrH_zHla51eiQ42F8tognZ4vefcVw/edit?usp=sharing
 https://docs.google.com/document/d/1X3fK_9k2x4nImWI66EGrKbN0bOYXPRAepmGPEc-crHU/edit?usp=sharing
 - This involves one project, in the folder called mon_tuesday_78_09:
+
 -- travisGettingStarted
+
 -- rest-jpa-devops-startcode-ci
+
 Where the exercises are solved.
 
 The github for ***travisGettingStarted*** (related to exercise: "Getting Started with Travis and CI", can get found here):
