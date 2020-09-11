@@ -28,7 +28,7 @@ Travis: -- https://travis-ci.com/github/VeraUtil/dev-rest-startcode-ci
 
 With status: "build:passed"
 
-# The deployed web-page related to "REST, JPA, Test and CI with our start code", can get found here:
+-- The deployed web-page related to "REST, JPA, Test and CI with our start code", can get found here (or on the index web-page):
 
 -- https://work.emucoach.com/devops-starter/api/movie/
 
