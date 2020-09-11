@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+    <!-- Opgave 1 -->
+    <head>
+        
+        <title>Simple DOM manipulation and Event handling</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body> 
+        <h1> Simple DOM manipulation and Event handling </h1>
+        <div id ="data1"> DIV 1</div>
+        <div id ="data2"> DIV 2 </div>
+        <div id ="data3"> DIV 3 </div>
+        
+        <button id ="button"> Button </button>
+        
+        <script>
+            
+            // Til opgave 1a, ved brug af getElementsByTagName. Her bruger de dog alle samme farve.
+            let divElements = document.getElementsByTagName("div");
+            for (let i = 0; i < divElements.length; i++) {
+                divElements[i].style.background = 'green';
+            }
+            
+            // Til opgave 1b
+            function changeColors() {
+                document.getElementById("data1").style.backgroundColor = "green";
+                document.getElementById("data2").style.backgroundColor = "orange";
+                document.getElementById("data3").style.backgroundColor = "red";
+            }
+            
+            document.getElementById("button").addEventListener("click", changeColors);
+            
+            </script>
+    </body>
+</html>

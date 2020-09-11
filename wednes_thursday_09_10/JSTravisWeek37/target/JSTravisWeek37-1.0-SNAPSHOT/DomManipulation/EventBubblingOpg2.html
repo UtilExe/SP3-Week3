@@ -1,0 +1,49 @@
+
+<html>
+    <head>
+        <title>Event Bubbling and event arguments</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="newcss.css">
+    </head>
+    <body>
+        <h1>Event Bubbling and event arguments</h1>
+
+        <!-- Purpose of adding cssdata div class is so we can add it all to CSS. There might be a better way to do it ?  -->
+        <div class = "cssdata" id = "one">  Opg2A </div>
+        <div class = "cssdata" id = "two"> Opg2A </div>
+        
+        <!-- Opgave 2B -->
+        <div id ="outer">
+        <div class = "cssdata" id ="3" > Tryk </div>
+        <div class = "cssdata" id ="4"> Tryk </div>
+        <div class = "cssdata" id ="5"> Tryk </div>
+        <div class = "cssdata" id ="6"> Tryk </div>
+        <div class = "cssdata" id ="7" > Tryk </div>
+        <div class = "cssdata" id ="8" > Tryk </div>
+        <div class = "cssdata" id ="9"> Tryk </div>
+        <div class = "cssdata" id ="10"> Tryk </div>
+        <div class = "cssdata" id ="11"> Tryk </div>
+        <div class = "cssdata" id ="12"> Tryk </div>
+        <div class = "cssdata" id ="13" > Tryk </div>
+        <div class = "cssdata" id ="14"> Tryk </div>
+        </div>
+        <p id = "ny"> </p>
+
+        <script>
+
+            <!-- Opgave 2A related -->
+            document.getElementById("one").addEventListener("click", callConsole);
+            document.getElementById("two").addEventListener("click", callConsole);
+
+
+            function callConsole() {
+                console.log("Hi from " + this.id)
+            }
+            
+            <!-- Opgave 2B and (2C?) related -->
+             document.getElementById("outer").addEventListener("click", function(event){document.getElementById("ny").innerHTML = "ID: " + event.target.id} );
+            
+        </script>
+    </body>
+</html>

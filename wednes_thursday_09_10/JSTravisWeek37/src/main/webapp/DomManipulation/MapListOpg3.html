@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Using map to create list’s (ul’s, tables etc.)</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Using map to create list’s (ul’s, tables etc.)</h1>
+        <ul id ="test">
+        </ul>
+
+        <form>
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname" value=""><br>
+            <button id ="button">Add name</button><br><br>
+
+            <label for="buttonRemoveFirst">Remove first:</label><br>
+            <button id="buttonRemoveFirst" name="buttonRemoveFirst">Remove first</button><br><br>
+
+            <label for="buttonRemoveLast">Remove last</label><br>
+            <button id="buttonRemoveLast" name="buttonRemoveLast">Remove last</button><br><br>
+
+
+            <input type="hidden" name="hidden" value="test">
+        </form> 
+
+
+        <script>
+            let liste = ["Jan", "Ole", "Mads", "Frederik"];
+
+            readListe(liste);
+
+            function readListe(list) {
+                let html = list.map(n => '<li>' + n + '</li>').join(" ");
+                document.getElementById("test").innerHTML = html;
+            }
+
+
+            document.getElementById("button").addEventListener("click", tilfojListe);
+            document.getElementById("buttonRemoveFirst").addEventListener("click", removeFromFirstList);
+            document.getElementById("buttonRemoveLast").addEventListener("click", removeFromLastList);
+
+            function tilfojListe(event) {
+                event.preventDefault();
+                let name = document.getElementById("fname").value;
+                liste.push(name);
+                readListe(liste);
+                document.getElementById("fname").value = ""; // Blot så vores kolonne felt bliver tomt igen, så vores tidligere data ikke længere fremgår.
+            }
+
+            function removeFromFirstList(event) {
+                event.preventDefault();
+                let removeFirst = document.getElementById("buttonRemoveFirst");
+                liste.shift(removeFirst);
+                readListe(liste);
+            }
+
+            function removeFromLastList(event) {
+                event.preventDefault();
+                let removeLast = document.getElementById("buttonRemoveLast");
+                liste.pop(removeLast);
+                readListe(liste);
+            }
+
+        </script>
+    </body>
+</html>
