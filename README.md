@@ -71,7 +71,10 @@ https://docs.google.com/document/d/1vctwfldnReoszybFU0jO7Jm7JQ4Ia-CJvEymaj-QClM/
 
 In here, I have added a HTML page, including JS and CSS, for each of the tasks on that document. 
 
-Almost all of the tasks are done, but I had some problems completing the calculator. I tried as good as I could, but I reached a point where I wasn't able to proceed calculating, after entering the numbers. (even though I read the hints :/) 
+All of the tasks are done, besides from the red ones, (due to lack of time). 
+
+They can get seen here:
+- https://www.work.emucoach.com
 
 The tasks from "Getting Started with the fetch-API" (separate docs) were skipped for now, because they weren't mandatory, and I was short on time, and limited knowledge.
 
@@ -80,6 +83,7 @@ All the solutions can be found on the Github Repository. They are however all in
 https://github.com/VeraUtil/SP3-Week3/commit/c10b998ab23125374bad5f5aec5eaf75fdb1c60f
 
 Droplet link: 
+https://www.work.emucoach.com
 
 I also deployed the solutions to my Droplet, which can be found here:
 
