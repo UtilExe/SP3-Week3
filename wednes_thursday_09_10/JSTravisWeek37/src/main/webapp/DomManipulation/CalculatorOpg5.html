@@ -65,22 +65,25 @@ and open the template in the editor.
         </div>
 
         <script>
-             var idElement = document.getElementById("buttons");
-             idElement.addEventListener("click", display);
-             document.getElementById("calculate").addEventListener("click", calculate);
+             let buttons = document.getElementById("buttons");
+             let displayVar = document.getElementById("display");
+             let result = document.getElementById("calculate");
+
+             buttons.addEventListener("click", display);
+             result.addEventListener("click", calculate);
              
-             function display() {
-                 document.getElementById("display").innerHTML += event.target.innerText;
+             function display(event) {
+                 event.preventDefault();
+                 
+                 displayVar.innerHTML += event.target.innerText;
              }
+             
              
              function calculate(event) {
-            
-              //   let test = document.getElementById("display").innerHTML = event.target.innerText;
-                 idElement.innerText += idElement;
-                 document.getElementById("display").innerHTML = event.target.innerText;
-                 
-             //           document.getElementById("outer").addEventListener("click", function(event){document.getElementById("ny").innerHTML = "ID: " + event.target.id} );
+                 event.stopPropagation();
+                 displayVar.innerHTML = eval(displayVar.innerHTML);
              }
+             
             </script>
     </body>
 </html>
